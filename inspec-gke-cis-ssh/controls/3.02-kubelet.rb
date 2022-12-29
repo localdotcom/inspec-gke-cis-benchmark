@@ -144,9 +144,13 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   ref 'CIS Benchmark', url: cis_url.to_s
   ref 'GCP Docs', url: 'https://kubernetes.io/docs/admin/kubelet/'
 
-  describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
-    subject { kubelet_config_file }
-    its('readOnlyPort') { should cmp 0 }
+  ## skipped due to existing infrastructure implementation
+  # describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
+  #   subject { kubelet_config_file }
+  #   its('readOnlyPort') { should cmp 0 }
+  # end
+  describe 'This control is not scored' do
+    skip 'This control is not scored. See SAS-1078 for more details.'
   end
 end
 
@@ -199,9 +203,13 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   ref 'CIS Benchmark', url: cis_url.to_s
   ref 'GCP Docs', url: 'https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/'
 
-  describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
-    subject { kubelet_config_file }
-    its('protectKernelDefaults') { should cmp 'true' }
+  ## skipped due to existing infrastructure implementation
+  # describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
+  #   subject { kubelet_config_file }
+  #   its('protectKernelDefaults') { should cmp 'true' }
+  # end
+  describe 'This control is not scored' do
+    skip 'This control is not scored. See SAS-1073 for more details.'
   end
 end
 
@@ -288,9 +296,13 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   ref 'CIS Benchmark', url: cis_url.to_s
   ref 'GCP Docs', url: 'https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/apis/kubeletconfig/v1beta1/types.go'
 
-  describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
-    subject { kubelet_config_file }
-    its('eventRecordQPS') { should cmp event_record_qps }
+  ## skipped due to existing infrastructure implementation
+  # describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
+  #   subject { kubelet_config_file }
+  #   its('eventRecordQPS') { should cmp event_record_qps }
+  # end
+  describe 'This control is not scored' do
+    skip 'This control is not scored. See SAS-1074 for more details.'
   end
 end
 
@@ -315,10 +327,14 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   ref 'CIS Benchmark', url: cis_url.to_s
   ref 'GCP Docs', url: 'http://rootsquash.com/2016/05/10/securing-the-kubernetes-api/'
 
-  describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
-    subject { kubelet_config_file }
-    its('tlsCertFile') { should cmp tls_cert_file }
-    its('tlsPrivateKeyFile') { should cmp tls_private_key_file }
+  ## skipped due to existing infrastructure implementation
+  # describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
+  #   subject { kubelet_config_file }
+  #   its('tlsCertFile') { should cmp tls_cert_file }
+  #   its('tlsPrivateKeyFile') { should cmp tls_private_key_file }
+  # end
+  describe 'This control is not scored' do
+    skip 'This control is not scored. See SAS-1075 for more details.'
   end
 end
 
@@ -372,8 +388,12 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   ref 'CIS Benchmark', url: cis_url.to_s
   ref 'GCP Docs', url: 'https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet-tls-bootstrapping/#kubelet-configuration'
 
-  describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
-    subject { kubelet_config_file }
-    its('RotateKubeletServerCertificate') { should cmp 'true' }
+  ## skipped due to existing infrastructure implementation
+  # describe "[#{gcp_project_id}] Kubelet config file #{kubelet_config_file_path}" do
+  #   subject { kubelet_config_file }
+  #   its('RotateKubeletServerCertificate') { should cmp 'true' }
+  # end
+  describe 'This control is not scored' do
+    skip 'This control is not scored. See SAS-1076 for more details.'
   end
 end
