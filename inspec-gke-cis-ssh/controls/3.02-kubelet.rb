@@ -135,7 +135,8 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   Unauthenticated access is provided to this read-only API which could possibly retrieve
   potentially sensitive information about the cluster."
 
-  tag cis_scored: true
+  # tag cis_scored: true
+  tag cis_scored: false
   tag cis_level: 1
   tag cis_gke: sub_control_id.to_s
   tag cis_version: cis_version.to_s
@@ -194,7 +195,8 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   match the desired secured system state. Ignoring this could potentially lead to running
   pods with undesired kernel behavior."
 
-  tag cis_scored: true
+  # tag cis_scored: true
+  tag cis_scored: false
   tag cis_level: 1
   tag cis_gke: sub_control_id.to_s
   tag cis_version: cis_version.to_s
@@ -287,7 +289,8 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   source of security information and analytics that ensure that your environment is
   consistently monitored using the event data."
 
-  tag cis_scored: true
+  # tag cis_scored: true
+  tag cis_scored: false
   tag cis_level: 2
   tag cis_gke: sub_control_id.to_s
   tag cis_version: cis_version.to_s
@@ -318,7 +321,8 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   desc 'rationale', "Kubelet communication contains sensitive parameters that should remain encrypted in
   transit. Configure the Kubelets to serve only HTTPS traffic."
 
-  tag cis_scored: true
+  # tag cis_scored: true
+  tag cis_scored: false
   tag cis_level: 1
   tag cis_gke: sub_control_id.to_s
   tag cis_version: cis_version.to_s
@@ -379,7 +383,8 @@ control "cis-gke-#{sub_control_id}-#{control_abbrev}" do
   expire. This automated periodic rotation ensures that the there are no downtimes due to
   expired certificates and thus addressing availability in the CIA security triad."
 
-  tag cis_scored: true
+  # tag cis_scored: true
+  tag cis_scored: false
   tag cis_level: 1
   tag cis_gke: sub_control_id.to_s
   tag cis_version: cis_version.to_s
